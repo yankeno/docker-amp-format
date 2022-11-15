@@ -1,8 +1,7 @@
 <meta charset="UTF-8" />
-<title>テスト</title>
+<title>DB疎通確認</title>
 <?php
 try {
-    # hostには「docker-compose.yml」で指定したコンテナ名を記載
     $dsn = "mysql:host=db;dbname=test;";
     $db = new PDO($dsn, 'phper', 'secret');
 

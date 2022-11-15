@@ -10,8 +10,11 @@ services:
       - 8080:80
   db:
     container_name: db
+    platform: linux/x86_64
     build: ./infra/mysql
     volumes:
-      - ./infra/mysql:/var/lib/mysql
+      - db-store:/var/lib/mysql
     ports:
       - 33060:3306
+volumes:
+  db-store:
